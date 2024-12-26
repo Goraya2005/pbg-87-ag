@@ -1,57 +1,52 @@
+'use client';
+
 import React from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Hero() {
+  const router = useRouter();
+
   return (
     <section
-      className="hero-section"
+      className="relative w-full flex items-center justify-end bg-no-repeat bg-center"
       style={{
-        backgroundImage: `url('/images/banner.jpg')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        color: 'black',
-        textShadow: '2px 2px 0px white',
+        backgroundImage: `url('/images/uaf-banner.jpg')`,
+        backgroundSize: 'contain',
+        height: '60vh', // Adjust height as needed
       }}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
-        <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
-          {/* Section header */}
-          <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            {/* Use Tailwind typography classes for h1, h2, h3 */}
-            <h1 className="text-5xl font-bold mb-4" data-aos="fade-up">
-              87-ag-Agri
-            </h1>
-            <h2 className="text-3xl font-semibold mb-4" data-aos="fade-up">
-              Plant Breeding and Genetics
-            </h2>
-            <h2 className="text-3xl font-semibold mb-4" data-aos="fade-up">
-              (FAISALABAD)
-            </h2>
-            <h3
-              className="text-2xl font-bold mb-4"
-              data-aos="fade-up"
-              style={{ color: 'blue' }}
-            >
-              University of Agriculture, Faisalabad
-            </h3>
-            <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
-              <div data-aos="fade-up" data-aos-delay="400">
-                <a
-                  className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0"
-                  href="/about"
-                >
-                  PBG - Faisalabad
-                </a>
-              </div>
-              <div data-aos="fade-up" data-aos-delay="600">
-                <a
-                  className="btn text-white bg-red-700 hover:bg-yellow-800 w-full sm:w-auto sm:ml-4"
-                  href="/gallery"
-                >
-                  Gallery
-                </a>
-              </div>
-            </div>
-          </div>
+      {/* Overlay for better text visibility */}
+      <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+
+      {/* Content Wrapper on the Right */}
+      <div className="relative z-10 text-white text-right max-w-md px-4 sm:px-6 lg:px-8 mr-8">
+        <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
+          87-ag-Agri
+        </h1>
+        <h2 className="text-3xl sm:text-4xl font-semibold mb-4">
+          Plant Breeding and Genetics
+        </h2>
+        <h3 className="text-2xl sm:text-3xl font-medium mb-6">
+          (FAISALABAD)
+        </h3>
+        <p className="text-xl sm:text-2xl mb-8">
+          University of Agriculture, Faisalabad
+        </p>
+
+        {/* Buttons */}
+        <div className="flex flex-col sm:flex-row justify-end gap-4">
+          <button
+            className="px-6 py-3 text-lg font-medium bg-purple-600 hover:bg-purple-700 rounded shadow-md"
+            onClick={() => router.push('/about')}
+          >
+            PBG - Faisalabad
+          </button>
+          <button
+            className="px-6 py-3 text-lg font-medium bg-red-600 hover:bg-red-700 rounded shadow-md"
+            onClick={() => router.push('/gallery')}
+          >
+            Gallery
+          </button>
         </div>
       </div>
     </section>

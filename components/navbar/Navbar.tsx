@@ -1,11 +1,11 @@
-'use client'
-
-
+'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -15,9 +15,21 @@ export default function Navbar() {
     <nav className="bg-gray-800 p-4 fixed top-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
         {/* Left side logo and company name */}
-        <div className="flex items-center">
-          <img className="h-8 w-8 mr-2" src="/logo.png" alt="Logo" />
-          <span className="text-white font-semibold">87-ag-Agri @ PBG - Faisalabad</span>
+        <div
+          className="flex items-center cursor-pointer"
+          onClick={() => router.push('/')}
+        >
+          <div className="flex items-center">
+            {/* Logo Image */}
+            <div
+              className="h-8 w-8 mr-2 bg-cover bg-center rounded-full"
+              style={{ backgroundImage: "url('/logo.png')" }}
+            ></div>
+            {/* Company Name */}
+            <span className="text-white font-bold text-xl lg:text-2xl">
+              87-ag-Agri @ PBG - Faisalabad
+            </span>
+          </div>
         </div>
 
         {/* Hamburger menu for mobile */}
@@ -44,37 +56,65 @@ export default function Navbar() {
         </div>
 
         {/* Right side links */}
-        <div className={`lg:flex items-center space-x-4 ${isOpen ? 'block' : 'hidden'} lg:block`}>
-          <a href="/" className="block text-white lg:inline-block hover:text-gray-300">
+        <div
+          className={`lg:flex items-center space-x-4 ${
+            isOpen ? 'block' : 'hidden'
+          } lg:block`}
+        >
+          <div
+            onClick={() => router.push('/')}
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+          >
             Home
-          </a>
-          <a href="/about" className="block text-white lg:inline-block hover:text-gray-300">
+          </div>
+          <div
+            onClick={() => router.push('/about')}
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+          >
             About
-          </a>
-          <a href="/gallery" className="block text-white lg:inline-block hover:text-gray-300">
+          </div>
+          <div
+            onClick={() => router.push('/gallery')}
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+          >
             Gallery
-          </a>
-          <a href="/events" className="block text-white lg:inline-block hover:text-gray-300">
+          </div>
+          <div
+            onClick={() => router.push('/events')}
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+          >
             Events
-          </a>
+          </div>
         </div>
       </div>
 
       {/* Mobile menu */}
       {isOpen && (
         <div className="lg:hidden">
-          <a href="/" className="block text-white py-2 px-4 hover:bg-gray-700">
+          <div
+            onClick={() => router.push('/')}
+            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
+          >
             Home
-          </a>
-          <a href="/about" className="block text-white py-2 px-4 hover:bg-gray-700">
+          </div>
+          <div
+            onClick={() => router.push('/about')}
+            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
+          >
             About
-          </a>
-          <a href="/gallery" className="block text-white py-2 px-4 hover:bg-gray-700">
+          </div>
+          <div
+            onClick={() => router.push('/gallery')}
+            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
+          >
             Gallery
-          </a>
-          <a href="/events" className="block text-white py-2 px-4 hover:bg-gray-700">
+          </div>
+          <div
+            onClick={() => router.push('/events')}
+            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
+          >
             Events
-          </a>
+          </div>
         </div>
       )}
     </nav>

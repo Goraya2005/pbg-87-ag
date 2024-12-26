@@ -1,7 +1,3 @@
-export const metadata = {
-  title: 'Home - 87-ag-PBG',
-};
-
 import Navbar from '@/components/navbar/Navbar'; 
 import Events from '@/components/events/Events'; 
 import Copyright from '@/components/copyright/Copyright';  
