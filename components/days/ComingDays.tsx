@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const eventDate = "December 29, 2024"; // Event date
+const eventDate = "January 26, 2025"; // Event date
 
 function Days() {
   const [remainingTime, setRemainingTime] = useState(0);
