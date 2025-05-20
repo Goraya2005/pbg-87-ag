@@ -6,6 +6,9 @@ import PastEventDays4 from '@/components/days/PastDays4';
 import PastEventDays5 from '@/components/days/PastDays5';
 import PastEventDays6 from '@/components/days/PastDays6';
 import PastEventDays7 from '@/components/days/PastDays7';
+import PastEventDays8 from '@/components/days/PastDays8';
+
+
 
 export default function Events() {
   return (
@@ -50,6 +53,7 @@ export default function Events() {
           </section>
 
           <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8">
+            <PastEventDays8 />
             <PastEventDays7 />
             <div className="my-8" />
             <PastEventDays6 />

@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const pastEventDate = new Date("November 24, 2024");
+const pastEventDate = new Date("April 27, 2025");
 
 function calculateTimeDifference() {
   const now = new Date();
@@ -55,8 +55,8 @@ function PastEventDays() {
       <div className="flex flex-col h-full items-center justify-center p-6" data-aos="fade-up">
         <div className="event-block">
           <Image
-            src="/images/shahid-chohan.jpeg"
-            alt="Dr. Shahid Chohan"
+            src="/images/dr-sarwar.jpeg"
+            alt="Dr. Muhammad Sarwar"
             width={150}
             height={150}
             className="object-cover rounded-full shadow-lg"

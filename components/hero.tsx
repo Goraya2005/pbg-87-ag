@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black bg-opacity-20"></div>
 
       {/* Content Wrapper on the Right */}
-      <div className="relative z-10 text-white text-right max-w-md px-4 sm:px-6 lg:px-8 mr-8">
+      <div className="relative z-10 text-white text-right max-w-md px-4 sm:px-6 lg:px-8 mr-20 mt-24">
         <h1 className="text-5xl sm:text-6xl font-extrabold mb-6">
           87-ag-Agri
         </h1>

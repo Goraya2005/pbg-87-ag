@@ -1,604 +1,98 @@
+// app/components/Album.tsx
+
+import React from 'react';
 import Image from 'next/image';
 
-const Album = () => {
-  return (
-    <section className="py-8">
-      {/* Main heading */}
-      <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold mb-2">Monthly Meeting Albums: 87-ag-PBG-FAISALABAD</h1>
-        <br />
-        <br />
-
-      {/* Section for November 24, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: November 24, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/24-11-2024/1.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-11-2024/3.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-11-2024/5.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-11-2024/7.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-
-
-
-
-      {/* Section for October 20, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: October 20, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/20-10-2024/1.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/2.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/3.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/4.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      
-        <div>
-          <Image
-            src="/images/20-10-2024/6.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/8.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/10.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-10-2024/12.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      
-      </div>
-
-
-
-
-
-      {/* Section for September 28, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: September 28, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/28-09-2024/12.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/11.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/10.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/9.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/8.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/7.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/6.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/5.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/4.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/3.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/2.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/28-09-2024/1.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>/
-
-      </div>
-
-
-
-
-        <h2 className="text-2xl text-gray-500">Date of Meeting: August 24, 2024</h2>
-      </div>
-
-      {/* First Row of Images - Responsive Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/24-08-2024/1.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/2.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/3.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/4.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      {/* Second Row of Images */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/24-08-2024/5.jpg"
-            alt="Meeting Image 5"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/6.jpg"
-            alt="Meeting Image 6"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/7.jpg"
-            alt="Meeting Image 7"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/8.jpg"
-            alt="Meeting Image 8"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      {/* Third Row of Images */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/24-08-2024/9.jpg"
-            alt="Meeting Image 9"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/10.jpg"
-            alt="Meeting Image 10"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/11.jpg"
-            alt="Meeting Image 11"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/24-08-2024/12.jpg"
-            alt="Meeting Image 12"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-
-
-      {/* Section for July 20, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: July 20, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/20-07-2024/1.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-07-2024/2.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-07-2024/3.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-07-2024/4.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      {/* Section for May 25, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: May 25, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/25-05-2024/1.jpg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/25-05-2024/2.jpg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/25-05-2024/3.jpg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/25-05-2024/4.jpg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      {/* Section for April 20, 2024 Meeting */}
-      <div className="text-center mb-12">
-        <h2 className="text-2xl text-gray-500">Date of Meeting: April 20, 2024</h2>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/20-04-2024/1a.jpeg"
-            alt="Meeting Image 1"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1b.jpeg"
-            alt="Meeting Image 2"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1c.jpeg"
-            alt="Meeting Image 3"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1d.jpeg"
-            alt="Meeting Image 4"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/20-04-2024/1e.jpeg"
-            alt="Meeting Image 5"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1f.jpeg"
-            alt="Meeting Image 6"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1g.jpeg"
-            alt="Meeting Image 7"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1h.jpeg"
-            alt="Meeting Image 8"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-        <div>
-          <Image
-            src="/images/20-04-2024/1a.jpeg"
-            alt="Meeting Image 9"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1j.jpeg"
-            alt="Meeting Image 10"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1m.jpeg"
-            alt="Meeting Image 11"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-        <div>
-          <Image
-            src="/images/20-04-2024/1l.jpeg"
-            alt="Meeting Image 12"
-            width={300}
-            height={200}
-            className="object-cover w-full h-full"
-          />
-        </div>
-      </div>
-    </section>
-  );
+type Section = {
+  date: string;
+  folder: string;
+  images: string[];
 };
+
+const sections: Section[] = [
+  {
+    date: 'April 27, 2025',
+    folder: '/images/27-04-2025',
+    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '10.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '22.jpg', '23.jpg', '24.jpg', '25.jpg','26.jpg', '27.jpg', '28.jpg', '29.jpg', '30.jpg'],
+  },
+  {
+    date: 'November 24, 2024',
+    folder: '/images/24-11-2024',
+    images: ['1.jpg', '3.jpg', '5.jpg', '7.jpg'],
+  },
+  {
+    date: 'October 20, 2024',
+    folder: '/images/20-10-2024',
+    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '6.jpg', '8.jpg', '10.jpg', '12.jpg'],
+  },
+  {
+    date: 'September 28, 2024',
+    folder: '/images/28-09-2024',
+    images: [
+      '12.jpg','11.jpg','10.jpg','9.jpg','8.jpg','7.jpg','6.jpg','5.jpg','4.jpg','3.jpg','2.jpg','1.jpg'
+    ],
+  },
+  {
+    date: 'August 24, 2024',
+    folder: '/images/24-08-2024',
+    images: Array.from({ length: 12 }, (_, i) => `${i + 1}.jpg`),
+  },
+  {
+    date: 'July 20, 2024',
+    folder: '/images/20-07-2024',
+    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+  },
+  {
+    date: 'May 25, 2024',
+    folder: '/images/25-05-2024',
+    images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
+  },
+  {
+    date: 'April 20, 2024',
+    folder: '/images/20-04-2024',
+    images: [
+      '1a.jpeg','1b.jpeg','1c.jpeg','1d.jpeg',
+      '1e.jpeg','1f.jpeg','1g.jpeg','1h.jpeg',
+      '1j.jpeg','1m.jpeg','1l.jpeg'
+    ],
+  },
+];
+
+const Album: React.FC = () => (
+  <section aria-labelledby="album-heading" className="py-8 px-4">
+    <div className="max-w-7xl mx-auto">
+      <h1
+        id="album-heading"
+        className="text-4xl font-bold text-center mb-12"
+      >
+        Monthly Meeting Album: 87-​ag-​PBG-​FAISALABAD
+      </h1>
+
+      {sections.map(({ date, folder, images }, idx) => (
+        <div key={idx} className="mb-16">
+          <h2 className="text-2xl text-gray-500 text-center mb-8">
+            Date of Meeting: {date}
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            {images.map((filename) => (
+              <div
+                key={filename}
+                className="relative w-full h-48 sm:h-56 md:h-64 rounded-md overflow-hidden"
+              >
+                <Image
+                  src={`${folder}/${filename}`}
+                  alt={`Meeting image ${filename}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+);
 
 export default Album;
