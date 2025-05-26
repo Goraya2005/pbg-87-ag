@@ -3,11 +3,13 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const pastEventDate = new Date("April 20, 2024");
+type PastEventDaysProps = {
+  eventDate: string; // e.g., "May 25, 2025"
+  imageSrc: string;  // e.g., "/images/dr-sarwar.jpeg"
+};
 
-function calculateTimeDifference() {
+function calculateTimeDifference(pastEventDate: Date) {
   const now = new Date();
-
   const totalMilliseconds = now.getTime() - pastEventDate.getTime();
 
   const totalSeconds = Math.floor(totalMilliseconds / 1000);
@@ -30,16 +32,16 @@ function calculateTimeDifference() {
   return { yearsPassed, monthsPassed, daysPassed, hoursPassed, minutesPassed, secondsPassed };
 }
 
-function PastEventDays() {
-  const [timePassed, setTimePassed] = useState(calculateTimeDifference());
+const PastEventDays: React.FC<PastEventDaysProps> = ({ eventDate, imageSrc }) => {
+  const pastEventDate = new Date(eventDate);
+  const [timePassed, setTimePassed] = useState(() => calculateTimeDifference(pastEventDate));
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setTimePassed(calculateTimeDifference());
+      setTimePassed(calculateTimeDifference(pastEventDate));
     }, 1000);
-
     return () => clearInterval(timer);
-  }, []);
+  }, [eventDate]);
 
   return (
     <div className="flex mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center">
@@ -55,8 +57,8 @@ function PastEventDays() {
       <div className="flex flex-col h-full items-center justify-center p-6" data-aos="fade-up">
         <div className="event-block">
           <Image
-            src="/images/shahid-chohan.jpeg"
-            alt="Dr. Shahid Chohan"
+            src={imageSrc}
+            alt="Event Image"
             width={150}
             height={150}
             className="object-cover rounded-full shadow-lg"
@@ -68,34 +70,23 @@ function PastEventDays() {
       <div className="flex flex-col h-full p-6 bg-red-800 text-center justify-center rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
         <h3 className="text-2xl sm:text-xl font-bold mb-4 text-white">Time Since Event</h3>
         <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-6 gap-4 justify-items-center">
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.yearsPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Years</p>
-          </div>
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.monthsPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Months</p>
-          </div>
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.daysPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Days</p>
-          </div>
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.hoursPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Hours</p>
-          </div>
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.minutesPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Minutes</p>
-          </div>
-          <div className="time-block">
-            <p className="text-3xl sm:text-2xl font-bold text-white">{timePassed.secondsPassed}</p>
-            <p className="text-sm sm:text-xs text-white">Seconds</p>
-          </div>
+          {[
+            { label: 'Years', value: timePassed.yearsPassed },
+            { label: 'Months', value: timePassed.monthsPassed },
+            { label: 'Days', value: timePassed.daysPassed },
+            { label: 'Hours', value: timePassed.hoursPassed },
+            { label: 'Minutes', value: timePassed.minutesPassed },
+            { label: 'Seconds', value: timePassed.secondsPassed },
+          ].map(({ label, value }) => (
+            <div className="time-block" key={label}>
+              <p className="text-3xl sm:text-2xl font-bold text-white">{value}</p>
+              <p className="text-sm sm:text-xs text-white">{label}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default PastEventDays;
