@@ -13,7 +13,7 @@ const testimonials: Testimonial[] = [
   {
     src: '/images/irfan-jafar.jpeg',
     alt: 'Irfan Jafar',
-    name: 'Irfan Jafar',
+    name: 'Mr. Irfan Jafar',
     description:
       'A seasoned banker, brings years of expertise and leadership to his role. Currently based in Faisalabad, he plays a pivotal role in shaping the financial landscape of the region. With his astute insights and strategic acumen, Irfan Jafar continues to drive innovation and growth in the banking sector.',
   },
@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
   {
     src: '/images/rasheed2.jpg',
     alt: 'Abdul Rasheed',
-    name: 'Abdul Rasheed',
+    name: 'Mr. Abdul Rasheed',
     description:
       'A highly experienced banker, Irfan Jafar offers extensive expertise and strong leadership in his field. Residing in Faisalabad, he significantly influences the region’s financial development. Through his sharp insights and strategic vision, he consistently fosters innovation and advancement within the banking industry.',
   },
