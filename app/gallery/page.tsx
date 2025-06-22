@@ -73,7 +73,7 @@ export default function About() {
                 <div className="relative">
                   <Image
                     src="/images/boy1.jpg"
-                    alt="Boy"
+                    alt="Khalid Rafique"
                     className="object-cover w-full h-full"
                     width={400}
                     height={300}

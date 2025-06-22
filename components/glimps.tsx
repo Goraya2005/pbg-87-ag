@@ -33,7 +33,7 @@ const sections: Section[] = [
     ],
   },
   {
-    description: 'Monthly Meeting : Host - Muhammad Sarwar',
+    description: 'Host - Muhammad Sarwar',
     date: 'April 27, 2025',
     folder: '/images/27-04-2025',
     images: [
@@ -43,19 +43,19 @@ const sections: Section[] = [
     ],
   },
   {
-    description: 'Monthly Meeting : Host - Shahid Chohan',
+    description: 'Host - Shahid Chohan',
     date: 'November 24, 2024',
     folder: '/images/24-11-2024',
     images: ['1.jpg', '3.jpg', '5.jpg', '7.jpg'],
   },
   {
-    description: 'Monthly Meeting : Host - Zahoor Gill',
+    description: 'Host - Zahoor Gill',
     date: 'October 20, 2024',
     folder: '/images/20-10-2024',
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '6.jpg', '8.jpg', '10.jpg', '12.jpg'],
   },
   {
-    description: 'Monthly Meeting : Host - Khalid Rafique',
+    description: 'Host - Khalid Rafique',
     date: 'September 28, 2024',
     folder: '/images/28-09-2024',
     images: [
@@ -64,7 +64,7 @@ const sections: Section[] = [
     ],
   },
   {
-    description: 'Monthly Meeting : Host - Abdul Rasheed',
+    description: 'Host - Abdul Rasheed',
     date: 'August 24, 2024',
     folder: '/images/24-08-2024',
     images: Array.from({ length: 12 }, (_, i) => `${i + 1}.jpg`),
@@ -76,13 +76,13 @@ const sections: Section[] = [
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
   },
   {
-    description: 'Monthly Meeting : Host - Irfan Jaffar',
+    description: 'Host - Irfan Jaffar',
     date: 'May 25, 2024',
     folder: '/images/25-05-2024',
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
   },
   {
-    description: 'Monthly Meeting : Host - Shahid Chohan',
+    description: 'Host - Shahid Chohan',
     date: 'April 20, 2024',
     folder: '/images/20-04-2024',
     images: [
