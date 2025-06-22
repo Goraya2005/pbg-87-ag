@@ -1,11 +1,27 @@
-import Navbar from '@/components/navbar/Navbar'; 
+import Navbar from '@/components/navbar/Navbar';
 import Image from 'next/image';
 import Album from '@/components/glimps';
-import Copyright from '@/components/copyright/Copyright';  
+import Copyright from '@/components/copyright/Copyright';
+import React from 'react';
 
 export const metadata = {
   title: 'Home - 87-ag-PBG',
 };
+
+type Member = {
+  src: string;
+  alt: string;
+  delay?: number; // animation delay in ms (optional)
+};
+
+const members: Member[] = [
+  { src: '/images/irfan3.jpg', alt: 'Irfan Jafar' },
+  { src: '/images/dr-sarwar1.jpg', alt: 'Dr. Sarwar', delay: 200 },
+  { src: '/images/shahid-chohan.jpeg', alt: 'Shahid Chohan', delay: 200 },
+  { src: '/images/rasheed1.jpg', alt: 'Rasheed', delay: 200 },
+  { src: '/images/mujahid.jpg', alt: 'Rana Mujahid', delay: 200 },
+  { src: '/images/boy1.jpg', alt: 'Khalid Rafique' },
+];
 
 export default function About() {
   return (
@@ -42,57 +58,25 @@ export default function About() {
 
             {/* Responsive image grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {/* 1st Member */}
-              <div className="flex flex-col p-6 bg-blue-300" data-aos="fade-up">
-                <div className="relative">
-                  <Image
-                    src="/images/irfan3.jpg"
-                    alt="Irfan Jafar"
-                    className="object-cover w-full h-full"
-                    width={400}
-                    height={300}
-                  />
+              {members.map(({ src, alt, delay }, idx) => (
+                <div
+                  key={idx}
+                  className="flex flex-col p-6 bg-blue-300"
+                  data-aos="fade-up"
+                  {...(delay ? { 'data-aos-delay': delay } : {})}
+                >
+                  <div className="relative w-full h-72 sm:h-80 md:h-96 rounded-md overflow-hidden">
+                    <Image
+                      src={src}
+                      alt={alt}
+                      className="object-cover w-full h-full"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                      priority={idx === 0} // priority only first image
+                    />
+                  </div>
                 </div>
-              </div>
-
-              {/* 2nd Member */}
-              <div className="flex flex-col p-6 bg-blue-300" data-aos="fade-up" data-aos-delay="200">
-                <div className="relative">
-                  <Image
-                    src="/images/dr-sarwar1.jpg"
-                    alt="Dr. Sarwar"
-                    className="object-cover w-full h-full"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              </div>
-
-              {/* 3rd Member */}
-              <div className="flex flex-col p-6 bg-blue-300" data-aos="fade-up">
-                <div className="relative">
-                  <Image
-                    src="/images/boy1.jpg"
-                    alt="Khalid Rafique"
-                    className="object-cover w-full h-full"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              </div>
-
-              {/* 4th Member */}
-              <div className="flex flex-col p-6 bg-blue-300" data-aos="fade-up" data-aos-delay="200">
-                <div className="relative">
-                  <Image
-                    src="/images/shahid-chohan.jpeg"
-                    alt="Shahid Chohan"
-                    className="object-cover w-full h-full"
-                    width={400}
-                    height={300}
-                  />
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </div>
