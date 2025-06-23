@@ -20,7 +20,7 @@ const sections: Section[] = [
     folder: '/images/21-06-2025',
     images: [
       '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg',
-      '11.jpg', '12.jpg', '13.jpg', '14.jpg',
+      '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '20.jpg', '21.jpg', '2.jpg', '3.jpg', '4.jpg'
     ],
   },
   {
@@ -43,19 +43,19 @@ const sections: Section[] = [
     ],
   },
   {
-    description: 'Host - Shahid Chohan',
+    description: 'Host - Irfan Jaffar',
     date: 'November 24, 2024',
     folder: '/images/24-11-2024',
     images: ['1.jpg', '3.jpg', '5.jpg', '7.jpg'],
   },
   {
-    description: 'Host - Zahoor Gill',
+    description: 'Host - Khalid Rafique',
     date: 'October 20, 2024',
     folder: '/images/20-10-2024',
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg', '6.jpg', '8.jpg', '10.jpg', '12.jpg'],
   },
   {
-    description: 'Host - Khalid Rafique',
+    description: 'Host - Zahoor Gill',
     date: 'September 28, 2024',
     folder: '/images/28-09-2024',
     images: [
@@ -76,18 +76,18 @@ const sections: Section[] = [
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
   },
   {
-    description: 'Host - Irfan Jaffar',
+    description: 'Venue : University of Agriculture, Faisalabad - Old Qasim Hall Canteen',
     date: 'May 25, 2024',
     folder: '/images/25-05-2024',
     images: ['1.jpg', '2.jpg', '3.jpg', '4.jpg'],
   },
   {
-    description: 'Host - Shahid Chohan',
+    description: 'Venue : University of Agriculture, Faisalabad - Old Qasim Hall Canteen',
     date: 'April 20, 2024',
     folder: '/images/20-04-2024',
     images: [
       '1a.jpeg', '1b.jpeg', '1c.jpeg', '1d.jpeg', '1e.jpeg', '1f.jpeg', '1g.jpeg', '1h.jpeg',
-      '1j.jpeg', '1m.jpeg', '1l.jpeg',
+      '1j.jpeg', '1m.jpeg', '1l.jpeg', '1d.jpeg'
     ],
   },
 ];
