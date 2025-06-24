@@ -37,7 +37,7 @@ const testimonials: Testimonial[] = [
     alt: 'Abdul Rasheed',
     name: 'Mr. Abdul Rasheed',
     description:
-      'A highly experienced banker, Irfan Jafar offers extensive expertise and strong leadership in his field. Residing in Faisalabad, he significantly influences the region’s financial development. Through his sharp insights and strategic vision, he consistently fosters innovation and advancement within the banking industry.',
+      'With a wealth of experience, he stands as a pillar of wisdom and leadership in the banking realm. Rooted in Faisalabad, his guidance shapes the course of the region’s financial landscape. Through insightful judgment and strategic foresight, he kindles a spirit of innovation, steering the banking sector toward a future of enduring progress.',
   },
   {
     src: '/images/mujahid2.jpg',
