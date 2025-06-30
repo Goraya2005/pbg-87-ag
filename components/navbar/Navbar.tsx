@@ -26,8 +26,8 @@ export default function Navbar() {
               style={{ backgroundImage: "url('/logo.png')" }}
             ></div>
             {/* Company Name */}
-            <span className="text-white font-bold text-xl lg:text-2xl">
-              87-ag-Agri @ PBG - Faisalabad
+            <span className="text-white font-bold text-xl lg:text-xl">
+              87-ag-Agri - PBG - Faisalabad
             </span>
           </div>
         </div>

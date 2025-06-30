@@ -4,6 +4,10 @@ const PastEvent = () => {
   return (
     <main>
       <PastEventDays
+        eventDate="Junw 29, 2025"
+        imageSrc="/images/17.jpg"
+      />
+      <PastEventDays
         eventDate="May 25, 2025"
         imageSrc="/images/dr-sarwar.jpeg"
       />

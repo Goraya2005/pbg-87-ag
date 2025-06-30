@@ -20,7 +20,8 @@ const members: Member[] = [
   { src: '/images/shahid-chohan.jpeg', alt: 'Shahid Chohan', delay: 200 },
   { src: '/images/rasheed1.jpg', alt: 'Rasheed', delay: 200 },
   { src: '/images/mujahid.jpg', alt: 'Rana Mujahid', delay: 200 },
-  { src: '/images/boy1.jpg', alt: 'Khalid Rafique' },
+  { src: '/images/17.jpg', alt: 'Khalid Rafique' },
+  { src: '/images/nazar.jpg', alt: 'nazar' },
 ];
 
 export default function About() {

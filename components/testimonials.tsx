@@ -47,11 +47,18 @@ const testimonials: Testimonial[] = [
       'A venerable figure in banking, wields a wealth of experience and distinguished leadership in his esteemed vocation. Stationed in Faisalabad, he occupies a consequential role in sculpting the financial realm of the province. With keen discernment and sagacious strategy, he steadfastly propels progress and refinement within the noble sphere of banking.',
   },
   {
-    src: '/images/khalid.jpg',
+    src: '/images/17.jpg',
     alt: 'Khalid Rafique',
     name: 'Khalid Rafique',
     description:
       'A distinguished Advocate of the High Court based in Faisalabad, specializing in civil, land, and revenue matters. Renowned for his legal expertise and unwavering dedication, he adeptly navigates complex cases, providing insightful counsel and robust representation. His commitment to justice and deep understanding of the law make him a respected figure in the legal community.',
+  },
+  {
+    src: '/images/nazar.jpg',
+    alt: 'Nazar',
+    name: 'Dr. Nazar Hussain',
+    description:
+      'Dr. Nazar Hussain, holding a PhD in Plant Breeding and Genetics, currently serves at the University of Agriculture, Faisalabad (UAF). He applies his specialized expertise within the university Planning and Development, contributing to institutional growth and strategic advancement.'
   },
 ];
 
