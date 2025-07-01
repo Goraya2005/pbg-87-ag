@@ -1,0 +1,9 @@
+export { default as BlockArt } from './BlockArt';
+export { default as OurStorySection } from './OurStorySection';
+export { default as ValuesSection } from './ValuesSection';
+export { default as MembersSection } from './MembersSection';
+export { default as AlumniSpotlightSection } from './AlumniSpotlightSection';
+export { default as AchievementsSection } from './AchievementsSection';
+export { default as GallerySection } from './GallerySection';
+export { default as ContactSection } from './ContactSection';
+export { default as EventsSection } from './EventsSection'; 

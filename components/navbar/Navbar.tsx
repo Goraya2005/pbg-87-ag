@@ -12,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 fixed top-0 w-full z-10">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav className="bg-gray-800 p-4 fixed top-0 w-full z-20 shadow-md">
+      <div className="container mx-auto flex justify-between items-center px-2 sm:px-4">
         {/* Left side logo and company name */}
         <div
           className="flex items-center cursor-pointer"
@@ -26,7 +26,7 @@ export default function Navbar() {
               style={{ backgroundImage: "url('/logo.png')" }}
             ></div>
             {/* Company Name */}
-            <span className="text-white font-bold text-xl lg:text-xl">
+            <span className="text-white font-bold text-lg sm:text-xl lg:text-xl whitespace-nowrap">
               87-ag-Agri - PBG - Faisalabad
             </span>
           </div>
@@ -36,10 +36,11 @@ export default function Navbar() {
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-white focus:outline-none hover:text-gray-300"
+            className="text-white focus:outline-none hover:text-gray-300 p-2 rounded"
+            aria-label="Toggle menu"
           >
             <svg
-              className="w-6 h-6"
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -57,63 +58,65 @@ export default function Navbar() {
 
         {/* Right side links */}
         <div
-          className={`lg:flex items-center space-x-4 ${
+          className={`lg:flex items-center space-x-2 sm:space-x-4 ${
             isOpen ? 'block' : 'hidden'
           } lg:block`}
         >
           <div
             onClick={() => router.push('/')}
-            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-3 sm:px-4 rounded border border-white cursor-pointer transition-colors"
           >
             Home
           </div>
           <div
             onClick={() => router.push('/about')}
-            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-3 sm:px-4 rounded border border-white cursor-pointer transition-colors"
           >
             About
           </div>
           <div
             onClick={() => router.push('/gallery')}
-            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-3 sm:px-4 rounded border border-white cursor-pointer transition-colors"
           >
             Gallery
           </div>
           <div
             onClick={() => router.push('/events')}
-            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-4 rounded border border-white cursor-pointer"
+            className="block bg-blue-200 text-black hover:bg-blue-300 py-2 px-3 sm:px-4 rounded border border-white cursor-pointer transition-colors"
           >
             Events
           </div>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile menu overlay */}
       {isOpen && (
-        <div className="lg:hidden">
-          <div
-            onClick={() => router.push('/')}
-            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
-          >
-            Home
-          </div>
-          <div
-            onClick={() => router.push('/about')}
-            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
-          >
-            About
-          </div>
-          <div
-            onClick={() => router.push('/gallery')}
-            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
-          >
-            Gallery
-          </div>
-          <div
-            onClick={() => router.push('/events')}
-            className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer"
-          >
-            Events
+        <div className="fixed inset-0 bg-black bg-opacity-40 z-30 flex flex-col items-end lg:hidden">
+          <div className="w-3/4 sm:w-1/2 bg-gray-800 p-6 space-y-4 shadow-lg h-full">
+            <div
+              onClick={() => { setIsOpen(false); router.push('/'); }}
+              className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer transition-colors"
+            >
+              Home
+            </div>
+            <div
+              onClick={() => { setIsOpen(false); router.push('/about'); }}
+              className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer transition-colors"
+            >
+              About
+            </div>
+            <div
+              onClick={() => { setIsOpen(false); router.push('/gallery'); }}
+              className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer transition-colors"
+            >
+              Gallery
+            </div>
+            <div
+              onClick={() => { setIsOpen(false); router.push('/events'); }}
+              className="block bg-blue-200 text-black py-2 px-4 hover:bg-gray-700 rounded border border-white cursor-pointer transition-colors"
+            >
+              Events
+            </div>
           </div>
         </div>
       )}
