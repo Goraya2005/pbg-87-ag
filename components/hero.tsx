@@ -1,11 +1,8 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function Hero() {
-  const router = useRouter();
-
   return (
     <section
       className="relative w-full flex items-center justify-end bg-no-repeat bg-center"
@@ -22,7 +19,7 @@ export default function Hero() {
       <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-6 md:p-8">
         <div className="container mx-auto">
           <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-4 font-headline">
-            PBG Class of '87
+            PBG Class of &apos;87
           </h1>
         </div>
       </div>

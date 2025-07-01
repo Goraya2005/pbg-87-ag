@@ -6,7 +6,7 @@ interface BlockArtProps {
 }
 
 export default function BlockArt({ 
-  title = "PBG Class of '87 - Faisalabad Chapter",
+  title = "PBG Class of &apos;87 - Faisalabad Chapter",
   subtitle = "Decades later, our bond remains unbroken. Celebrating a lifetime of friendship, respect, and shared memories from our days at the University of Agriculture, Faisalabad."
 }: BlockArtProps) {
   return (

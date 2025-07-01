@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import Image from 'next/image';
 
 type PastEventDaysProps = {
@@ -33,7 +33,7 @@ function calculateTimeDifference(pastEventDate: Date) {
 }
 
 const PastEventDays: React.FC<PastEventDaysProps> = ({ eventDate, imageSrc }) => {
-  const pastEventDate = new Date(eventDate);
+  const pastEventDate = useMemo(() => new Date(eventDate), [eventDate]);
   const [timePassed, setTimePassed] = useState(() => calculateTimeDifference(pastEventDate));
 
   useEffect(() => {
@@ -41,7 +41,7 @@ const PastEventDays: React.FC<PastEventDaysProps> = ({ eventDate, imageSrc }) =>
       setTimePassed(calculateTimeDifference(pastEventDate));
     }, 1000);
     return () => clearInterval(timer);
-  }, [eventDate]);
+  }, [eventDate, pastEventDate]);
 
   return (
     <div className="flex mx-auto px-4 sm:px-6 lg:px-8 py-10 grid gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 items-center">
