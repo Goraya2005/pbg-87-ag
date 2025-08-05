@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 
-const eventDate = "July 27, 2025"; // Event date
+const eventDate = "August 23, 2025"; // Event date
 
 function Days() {
   const [remainingTime, setRemainingTime] = useState(0);
@@ -62,7 +62,7 @@ function Days() {
       <div className="flex flex-col items-center justify-center h-full p-6 bg-brown-800 rounded-lg shadow-md" data-aos="fade-up">
         <div className="flex items-center justify-center">
           <div className="event-block">
-            <Image src="/images/nazar.jpg" alt="Boy" width={200} height={200} className="rounded-full object-cover" />
+            <Image src="/images/zahoor-gill.jpg" alt="Boy" width={200} height={200} className="rounded-full object-cover" />
           </div>
         </div>
       </div>

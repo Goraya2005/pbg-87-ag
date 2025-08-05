@@ -14,6 +14,18 @@ type Section = {
 };
 
 const sections: Section[] = [
+  
+  {
+    description: 'Monthly Meeting - Host : Khalid Rafique - Venue : Al-Haram Restaurant, D-Ground, Faisalabad',
+    date: 'July 27, 2025',
+    folder: '/images/27-07-2025',
+    images: [
+      '1.jpg', '2.jpg', '3.jpg', '4.jpg', '5.jpg', '6.jpg', '7.jpg', '8.jpg', '9.jpg', '10.jpg',
+      '11.jpg', '12.jpg', '13.jpg', '14.jpg', '15.jpg', '16.jpg', '17.jpg', '18.jpg', '19.jpg', '3.jpg'
+    ],
+  },
+  
+  
   {
     description: 'Monthly Meeting - Host : Khalid Rafique - Venue : Al-Haram Restaurant, D-Ground, Faisalabad',
     date: 'June 29, 2025',
